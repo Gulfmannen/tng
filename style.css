@@ -1,0 +1,91 @@
+body {
+  min-height: 99vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(img/bg5.db8b4d1.png);
+  background-color: black;
+  color: white;
+}
+
+header {
+  margin-bottom: auto;
+}
+
+footer {
+  margin-top: auto;
+}
+
+#container {
+  font-family: "Crillee Italic BT";
+  margin-top: -10px;
+  text-align: center;
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="tel"] {
+  border-radius: 10px;
+  border: inset #0099f6;
+  width: 200px;
+  padding: 15px;
+  margin: 15px;
+}
+
+button {
+  font-size: 20px;
+  border-radius: 20px;
+  font-family: "Crillee Italic BT";
+  background-color: #0098f6cc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 20px;
+}
+
+button:hover {
+  background-color: #0099f6;
+  font-family: "Crillee Italic BT";
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+h1 {
+  color: #0099f6;
+  font-size: 50px;
+  font-family: "Crillee Italic BT";
+}
+#name {
+  color: #0099f6;
+  font-size: 15px;
+  background-image: url(img/space_rain.gif);
+
+  font-family: "Crillee Italic BT";
+}
+#phone {
+  font-size: 15px;
+  background-image: url(img/space_rain.gif);
+  color: #0099f6;
+  font-family: "Crillee Italic BT";
+}
+
+#error-message {
+  color: rgb(255, 0, 55);
+  font-family: "CrilleeEF-LightItalic";
+}
+::placeholder {
+  color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  input[type="text"],
+  input[type="tel"] {
+    width: 100%;
+  }
+}

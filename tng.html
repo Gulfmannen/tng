@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Dessa två länkar är för Font style  -->
+    <link
+      href="https://db.onlinewebfonts.com/c/2db9aaf90867a28240c55d2c408c9b30?family=CrilleeEF-LightItalic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Dessa två länkar är för Font style  -->
+    <link
+      href="https://db.onlinewebfonts.com/c/5eb13044774c4be60bb45a735e933046?family=Crillee+Italic+BT"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tng</title>
+  </head>
+
+  <body>
+    <audio id="errorSound">
+      <source src="sound/denybeep1.mp3" type="audio/mp3" />
+    </audio>
+
+    <audio id="saveButtonClickSound">
+      <source src="sound/computerbeep_10.mp3" type="audio/mp3" />
+    </audio>
+
+    <audio id="editButtonClickSound">
+      <source src="sound/computerbeep_11.mp3" type="audio/mp3" />
+    </audio>
+
+    <audio id="removeButtonClickSound">
+      <source src="sound/computerbeep_9.mp3" type="audio/mp3" />
+    </audio>
+
+    <audio id="removeAllButtonClickSound">
+      <source src="sound/computer_error.mp3" type="audio/mp3" />
+    </audio>
+
+    <marquee
+      ><img src="" alt="" /><img src="img/USS_Federation.png" alt=""
+    /></marquee>
+
+    <div id="container">
+      <h1>
+        <div id="error-message"></div>
+        <img src="img/28.gif" alt="" /> Kontakt: Beyond the Nebula
+        <img src="img/28.gif" alt="" />
+      </h1>
+      <div id="contact-form">
+        <input type="text" id="name" placeholder="Namn:" />
+        <input type="tel" id="phone" placeholder="Telefon-nummer:" />
+        <button onclick="saveContact()">Spara</button>
+        <button id="remove-all-button" onclick="removeAllContacts()">
+          Radera Allt
+        </button>
+      </div>
+      <div id="contact-list"></div>
+    </div>
+
+    <footer>
+      <marquee id="mq2" behavior="" direction="right">
+        <img src="img/USS_Enterprise_Refit2.png" alt=""
+      /></marquee>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
