@@ -1,8 +1,10 @@
 body {
+  background-image: url(img/8e46150f790fbefe438d9c2767c32ad1.gif);
+  background-size: auto; /* This will make the image cover the entire screen */
+  background-position: center; /* Center the background image */
   min-height: 99vh;
   display: flex;
   flex-direction: column;
-  background-image: url(img/bg5.db8b4d1.png);
   background-color: black;
   color: white;
 }
