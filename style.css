@@ -1,7 +1,7 @@
 body {
   background-image: url(img/8e46150f790fbefe438d9c2767c32ad1.gif);
-  background-size: auto; /* This will make the image cover the entire screen */
-  background-position: center; /* Center the background image */
+  background-size: auto;
+  background-position: center;
   min-height: 99vh;
   display: flex;
   flex-direction: column;
@@ -46,6 +46,7 @@ button {
 }
 
 button:hover {
+  text-shadow: cyan 0 0 10px;
   border: inset white;
   background-color: #0099f6;
   font-family: "Crillee Italic BT";
@@ -60,6 +61,7 @@ li {
   margin: 10px 0;
 }
 h1 {
+  text-shadow: 0 0 2px;
   color: #0099f6;
   font-size: 50px;
   font-family: "Crillee Italic BT";
