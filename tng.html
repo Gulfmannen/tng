@@ -21,7 +21,7 @@
 
   <body>
     <audio id="errorSound">
-      <source src="sound/denybeep1.mp3" type="audio/mp3" />
+      <source src="sound/denybeep4.mp3" type="audio/mp3" />
     </audio>
 
     <audio id="saveButtonClickSound">
@@ -37,7 +37,7 @@
     </audio>
 
     <audio id="removeAllButtonClickSound">
-      <source src="sound/computer_error.mp3" type="audio/mp3" />
+      <source src="sound/computerbeep_51.mp3" type="audio/mp3" />
     </audio>
 
     <marquee
@@ -46,10 +46,10 @@
 
     <div id="container">
       <h1>
-        <div id="error-message"></div>
         <img src="img/28.gif" alt="" /> Kontakt: Beyond the Nebula
         <img src="img/28.gif" alt="" />
       </h1>
+      <div id="error-message"></div>
       <div id="contact-form">
         <input type="text" id="name" placeholder="Namn:" />
         <input type="tel" id="phone" placeholder="Telefon-nummer:" />
@@ -57,10 +57,11 @@
         <button id="remove-all-button" onclick="removeAllContacts()">
           Radera Allt
         </button>
+        <button id="newList" onclick="newList()" style="display: none"></button>
       </div>
       <div id="contact-list"></div>
     </div>
-
+    <label id="text"></label>
     <footer>
       <marquee id="mq2" behavior="" direction="right">
         <img src="img/USS_Enterprise_Refit2.png" alt=""

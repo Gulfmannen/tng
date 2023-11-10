@@ -10,6 +10,7 @@ function saveContact() {
   var name = document.getElementById("name").value;
   var phone = document.getElementById("phone").value;
   var errorMessage = document.getElementById("error-message");
+  var marqueeElements = document.querySelectorAll("marquee");
 
   if (name && phone) {
     var contact = {
@@ -26,11 +27,25 @@ function saveContact() {
     displayContacts();
 
     saveButtonClickSound.play();
+
+    marqueeElements.forEach(function (marqueeElement) {
+      marqueeElement.stop();
+    });
+
+    // Startar både marquee elementen efter man klickar på "Spara"
+    marqueeElements.forEach(function (marqueeElement) {
+      marqueeElement.start();
+    });
   } else {
     errorMessage.textContent =
       "Full Stop! Var god vänligen fyll i både fälten för att spara, Make it So.";
 
     errorSound.play();
+
+    // Pausar båda marquee elementen när error meddelandes kommer upp
+    marqueeElements.forEach(function (marqueeElement) {
+      marqueeElement.stop();
+    });
   }
 }
 
@@ -49,7 +64,6 @@ function editContact(index) {
 
   displayContacts();
 }
-
 // Detta är funktionen som gör att man kan ta bort en lista man har skapat
 
 function removeContact(index) {
@@ -88,6 +102,16 @@ function displayContacts() {
   for (var i = 0; i < contacts.length; i++) {
     var contact = contacts[i];
     var contactItem = document.createElement("div");
+
+    // Css Style för den generade listan efter klickat "Spara"
+    contactItem.style.fontFamily = "CrilleeEF-LightItalic";
+    contactItem.style.fontSize = "20px";
+    contactItem.style.backgroundColor = "#0098f6cc";
+    contactItem.style.borderRadius = "15px";
+    contactItem.style.border = "4px ridge  white";
+    contactItem.style.width = "fit-content"; // Set width to fit content
+    contactItem.style.margin = "10px"; // Add margin for spacing
+    contactItem.style.padding = "15px"; // Add padding for spacing
 
     contactItem.innerHTML =
       "<strong>" +

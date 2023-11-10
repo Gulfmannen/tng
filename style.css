@@ -38,12 +38,13 @@ button {
   background-color: #0098f6cc;
   color: white;
   padding: 10px 20px;
-  border: none;
+  border: outset;
   cursor: pointer;
   margin: 20px;
 }
 
 button:hover {
+  border: inset white;
   background-color: #0099f6;
   font-family: "Crillee Italic BT";
 }
@@ -62,25 +63,33 @@ h1 {
   font-family: "Crillee Italic BT";
 }
 #name {
-  color: #0099f6;
+  color: rgb(255, 230, 0);
   font-size: 15px;
   background-image: url(img/space_rain.gif);
-
   font-family: "Crillee Italic BT";
 }
 #phone {
   font-size: 15px;
   background-image: url(img/space_rain.gif);
-  color: #0099f6;
+  color: rgb(255, 230, 0);
   font-family: "Crillee Italic BT";
 }
 
 #error-message {
+  font-size: 25px;
   color: rgb(255, 0, 55);
   font-family: "CrilleeEF-LightItalic";
 }
 ::placeholder {
   color: white;
+}
+
+#contact-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 @media only screen and (max-width: 1024px) {
